@@ -7,7 +7,7 @@ Created on 21 déc. 2015
 @author: druzy
 '''
 
-class Model:
+class Model(object):
     '''
     a Model of mvc
     '''
@@ -17,6 +17,8 @@ class Model:
         '''
         Constructor
         '''
+        object.__init__(self)
+        
         self._listeners=list()
     
     def add_property_change_listener(self,listener):
