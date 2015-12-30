@@ -26,7 +26,7 @@ class Controller:
         """
         add a view to the controller
         """
-        self._views.add(view)
+        self._views.append(view)
         self.model.add_property_change_listener(view)
         
     def remove_view(self,view):
@@ -67,6 +67,6 @@ class Controller:
             """ if views is not a list but just a view """
             l=list()
             l.append(views)
-            self._notify_action(l)
+            self.notify_action(l)
             
     
