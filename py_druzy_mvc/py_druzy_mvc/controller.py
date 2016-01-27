@@ -57,16 +57,11 @@ class Controller:
         for view in self._views:
             view.on_top()
             
-    def notify_action(self,views,action,**args):
+    def notify_action(self,view,action,**kwargs):
         """
         notify an action to the controller
         
         the  subclass must override this
         """
-        if isinstance(views, View):
-            """ if views is not a list but just a view """
-            l=list()
-            l.append(views)
-            self.notify_action(l)
             
     
